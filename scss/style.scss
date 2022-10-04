@@ -1,0 +1,436 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--Strong-Cyan: #26baa4;
+	--Strong-Cyan-btn: hsl(171, 63%, 66%);
+	--Cyan-border: hsl(171, 67%, 34%);
+	--Cyan-border-hover: hsl(171, 64%, 44%);
+	--Light-Blue: #6173ff;
+	--Light-Blue-hover: hsl(233, 89%, 74%);
+	--Light-Blue-border: hsl(233, 68%, 60%);
+	--Light-Blue-border-hover: hsl(233, 67%, 63%);
+	--Dark-Grayish-Blue: hsl(210, 10%, 33%);
+	--footer-bg: hsl(0, 0%, 93%);
+	--Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-image: url(../images/bg-header-mobile.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 1.8rem;
+	font-family: 'Bai Jamjuree', sans-serif;
+	color: var(--Grayish-Blue);
+}
+
+// ----------------------------
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: var(--Dark-Grayish-Blue);
+}
+// ----------------------------
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--Dark-Grayish-Blue);
+}
+
+button {
+	padding: 1em 1em 0.8em;
+	width: 100%;
+	border: none;
+	border-radius: 200px;
+	color: white;
+	font-size: 1.8rem;
+	cursor: pointer;
+	transition: background-color 0.3s, border 0.3s;
+}
+
+.ios-btn {
+	background-color: var(--Strong-Cyan);
+	border-bottom: 3px solid var(--Cyan-border);
+	box-shadow: 0px 20px 49px -18px rgb(38, 186, 154);
+
+	&:hover {
+		background-color: var(--Strong-Cyan-btn);
+		border-bottom: 3px solid var(--Cyan-border-hover);
+	}
+}
+
+.mac-btn {
+	margin-top: 1.3em;
+	background-color: var(--Light-Blue);
+	border-bottom: 3px solid var(--Light-Blue-border);
+	box-shadow: 0px 20px 49px -18px rgb(114, 130, 252);
+
+	&:hover {
+		background-color: var(--Light-Blue-hover);
+		border-bottom: 3px solid var(--Light-Blue-border-hover);
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 80vw;
+	max-width: 630px;
+	text-align: center;
+}
+
+.section__title {
+	margin-bottom: 0.7em;
+}
+
+.section__text,
+.header__text {
+	margin-bottom: 4.2em;
+	font-size: 1.55rem;
+	line-height: 1.8em;
+}
+
+.header,
+.section {
+	margin-bottom: 9em;
+}
+
+.header {
+	padding-top: 6em;
+
+	&__logo {
+		margin-bottom: 3.8em;
+		width: 125px;
+	}
+
+	&__headline {
+		font-size: 3rem;
+	}
+
+	&__text {
+		margin: 1.3em 0 3em;
+	}
+}
+
+.snippets__img,
+.clipboard__img {
+	width: 100%;
+}
+
+.snippets {
+	&__box {
+		margin-top: 2.9em;
+	}
+
+	&__small-text {
+		margin-top: 1em;
+		font-size: 1.5rem;
+		line-height: 1.8em;
+
+		&--sync {
+			padding: 0 1em;
+		}
+	}
+}
+
+.workflow {
+	&__contentbox {
+		padding-top: 2em;
+	}
+
+	&__box:not(:first-child) {
+		margin-top: 3.4em;
+	}
+
+	&__content-title {
+		margin: 1.4em 0 0.8em;
+		font-size: 2.5rem;
+	}
+
+	&__content-text {
+		font-size: 1.55rem;
+		line-height: 1.75em;
+	}
+}
+
+.logos {
+	img:not(:first-child) {
+		margin-top: 4em;
+	}
+}
+
+.ios-mac {
+	.section__text {
+		padding: 0.1em;
+	}
+}
+
+footer {
+	background-color: var(--footer-bg);
+}
+
+.footer {
+	align-items: center;
+	padding: 2.5em 0;
+
+	&__img {
+		margin: 0 0 2.7em 0;
+	}
+
+	&__logo {
+		width: 58px;
+	}
+
+	&__links-content {
+		text-align: center;
+	}
+
+	&__linkbox:nth-child(2) {
+		margin: 1.5em 0;
+	}
+
+	&__link {
+		margin-top: 1.5em;
+
+		a {
+			color: var(--Dark-Grayish-Blue);
+			text-decoration: none;
+			transition: color 0.3s;
+
+			&:hover {
+				color: var(--Strong-Cyan);
+			}
+		}
+	}
+
+	&__media {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5em;
+		margin-top: 3em;
+	}
+
+	&__icon {
+		height: 24px;
+		cursor: pointer;
+
+		&--twitter {
+			height: 19.5px;
+		}
+
+		svg path {
+			transition: fill 0.3s;
+		}
+
+		svg:hover path {
+			fill: var(--Strong-Cyan);
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+	body {
+		background-image: url(../images/bg-header-desktop.png);
+	}
+
+	main {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.wrapper {
+		min-width: 1150px;
+	}
+
+	.buttons {
+		display: flex;
+		padding: 0 18.5em;
+	}
+
+	.section {
+		&__title {
+			font-size: 3.5rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.header__headline {
+		font-size: 4.5rem;
+	}
+
+	.header__text {
+		padding: 0 11em;
+		margin: 1em 0 2em;
+		font-size: 2.05rem;
+		line-height: 1.5em;
+	}
+
+	.mac-btn {
+		margin: 0 0 0 1em;
+	}
+
+	.snippets {
+		.section__text {
+			padding: 0 12em;
+			line-height: 1.6em;
+		}
+
+		&__body {
+			display: flex;
+		}
+
+		img {
+			position: absolute;
+			left: -1.7%;
+			width: 50%;
+		}
+
+		&__contentbox {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 1.2em;
+			left: 57%;
+			width: 100%;
+			max-width: 340px;
+			min-height: 36vw;
+			text-align: left;
+		}
+
+		&__box {
+			margin: 0;
+		}
+
+		&__h3-headline {
+			font-size: 2.4rem;
+		}
+
+		&__small-text {
+			margin: 0.6em 0 1.2em;
+			font-size: 1.6rem;
+			line-height: 1.9em;
+		}
+
+		&__small-text--sync {
+			padding: 0;
+		}
+	}
+
+	.section.clipboard {
+		margin-bottom: 4em;
+	}
+
+	.clipboard .section__text {
+		padding: 0 12em;
+	}
+
+	.clipboard__img {
+		width: 77%;
+	}
+
+	.workflow {
+		&__img {
+			height: 40px;
+		}
+
+		&__contentbox {
+			display: flex;
+			gap: 2em;
+			padding: 0;
+		}
+
+		&__box {
+			width: 100%;
+		}
+
+		&__box:not(:first-child) {
+			margin-top: 0em;
+		}
+
+		&__content-text {
+			font-size: 1.6rem;
+			line-height: 1.7em;
+		}
+	}
+
+	.logos {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		img {
+			margin: 0;
+		}
+
+		img:not(:first-child) {
+			margin-top: 0;
+		}
+	}
+
+	.ios-mac {
+		.section__text {
+			padding: 0 12em;
+			margin-bottom: 2.2em;
+		}
+	}
+
+	.footer {
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 8.5em;
+		}
+
+		&__img {
+			margin: 0 0 0 1.6em;
+		}
+
+		&__links-content {
+			display: flex;
+			gap: 6em;
+		}
+
+		&__linkbox {
+			text-align: left;
+		}
+
+		&__linkbox:nth-child(2) {
+			margin: 0;
+		}
+
+		&__link {
+			margin: 0;
+
+			&--second {
+				margin-top: 1em;
+			}
+		}
+
+		&__media {
+			margin: 0;
+			margin-left: auto;
+		}
+	}
+}
